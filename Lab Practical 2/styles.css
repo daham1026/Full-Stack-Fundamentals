@@ -1,0 +1,262 @@
+/* 1. GENERAL PAGE STYLES*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 1500px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #7f888f;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    color: #3d4449;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 44px;
+    margin: 20px 0 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0 0 25px;
+}
+
+h3 {
+    font-size: 23px;
+    margin: 8px 0 4px;
+}
+
+p {
+    margin: 8px 0 12px;
+}
+
+/* 2. HEADER AND NAVIGATION */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0 12px;
+    border-bottom: 3px solid #f56a6a;
+}
+
+.logo {
+    color: #3d4449;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #3d4449;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f56a6a;
+}
+
+/* 3. HOME PAGE INTRODUCTION */
+
+.intro {
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+}
+
+.intro h1 {
+    margin-top: 24px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+.intro p {
+    max-width: 700px;
+}
+
+/* 4. BUTTONS AND OUTLINED LINKS */
+
+.button {
+    display: inline-block;
+    min-width: 104px;
+    padding: 7px 16px;
+    border: 1px solid #f56a6a;
+    border-radius: 3px;
+    color: #f56a6a;
+    background-color: #ffffff;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+    background-color: #f56a6a;
+    color: #ffffff;
+}
+
+/* 5. WHAT WE DO / FEATURES */
+
+#features {
+    border-top: 2px solid #e9edef;
+    padding-top: 28px;
+    margin-bottom: 50px;
+}
+
+#features h2 {
+    display: table;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #f56a6a;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 35px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 5px 10px;
+}
+
+.icon {
+    flex: 0 0 55px;
+    color: #f56a6a;
+    font-size: 36px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-top: 0;
+}
+
+.feature p {
+    margin-top: 6px;
+}
+
+/* 6. PROJECTS PAGE */
+
+.section-title {
+    display: table;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #f56a6a;
+    margin: 30px 0 35px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+}
+
+.projects article {
+    min-width: 0;
+}
+
+.projects img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+.projects h3 {
+    margin-top: 8px;
+}
+
+.projects p {
+    margin: 4px 0 10px;
+}
+
+/* 7. FOOTER */
+
+footer {
+    margin-top: 35px;
+    padding: 12px 0 25px;
+    color: #7f888f;
+    font-size: 13px;
+}
+
+/* 8. SMALL-SCREEN RESPONSIVENESS */
+
+@media (max-width: 650px) {
+    body {
+        padding: 0 5%;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .features,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        row-gap: 20px;
+    }
+
+    .intro {
+        margin-top: 25px;
+    }
+
+    .banner {
+        max-height: 250px;
+    }
+}
